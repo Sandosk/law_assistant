@@ -1,0 +1,56 @@
+name: investigator
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^9.1.1
+  injectable: ^3.0.0
+  get_it: ^9.2.1
+  http: ^1.6.0
+  flutter_staggered_animations: ^1.1.1
+  audioplayers: ^6.8.1
+  file_selector: ^1.1.0
+  flutter_native_splash: ^2.4.8
+  flutter_launcher_icons: ^0.14.4
+  path_provider: ^2.1.6
+  shared_preferences: ^2.5.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.8 # تم تحديث الإصدار ليتوافق مع أحدث نسخ الفلاتر ويمنع الـ InvalidType
+  injectable_generator: ^3.1.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/sounds/
+
+# 🌟 هنا المكان الصحيح والمنعزل تماماً لإعدادات شاشة البدء (Splash Screen) 🌟
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/app_icon.jpg
+  fullscreen: true
+  android_12:
+    color: "#FFFFFF"
+    image: assets/images/app_icon.jpg
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/hd-photo-app_icon_final.jpeg.png" # Fallback for older Android versions & iOS
+  
+  # Adaptive Icons configuration for Android (Handles the rounded square shape)
+  adaptive_icon_background: "#FFFFFF" # Or your brand color hex code
+  adaptive_icon_foreground: "assets/images/hd-photo-app_icon_final.jpeg.png" # Your logo with a transparent background
